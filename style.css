@@ -1,0 +1,384 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --bg: #080d0b;
+    --surface: #101a14;
+    --green: #00e69a;
+    --light: #e9f5ed;
+    --muted: #9aa99f;
+    --border: #20352a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--bg);
+    color: var(--light);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 9%;
+    background: rgba(8,13,11,0.95);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(15px);
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: -2px;
+}
+
+.logo span {
+    color: var(--green);
+}
+
+nav {
+    display: flex;
+    gap: 24px;
+}
+
+nav a {
+    font-size: 12px;
+    color: var(--muted);
+    transition: .3s;
+}
+
+nav a:hover {
+    color: var(--green);
+}
+
+.hero {
+    min-height: 620px;
+    padding: 100px 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    background:
+      radial-gradient(ellipse at 80% 45%, rgba(0,230,154,.10), transparent 40%);
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.welcome, .tag {
+    color: var(--green);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(48px, 7vw, 82px);
+    line-height: 1.08;
+    letter-spacing: -4px;
+    font-weight: 800;
+}
+
+.hero h1 span, .section-title span {
+    color: var(--green);
+}
+
+.hero h2 {
+    color: #c2d2c7;
+    font-size: 19px;
+    margin-top: 25px;
+}
+
+.intro {
+    color: var(--muted);
+    max-width: 540px;
+    margin: 20px 0 30px;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 13px 23px;
+    border-radius: 7px;
+    font-size: 13px;
+    font-weight: 700;
+    transition: .3s;
+}
+
+.primary {
+    background: var(--green);
+    color: #06110b;
+}
+
+.primary:hover {
+    background: #70ffc8;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(0,230,154,.2);
+}
+
+.secondary {
+    border: 1px solid var(--border);
+    color: white;
+}
+
+.secondary:hover {
+    border-color: var(--green);
+    color: var(--green);
+}
+
+.social {
+    display: flex;
+    gap: 25px;
+    margin-top: 35px;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.social a:hover {
+    color: var(--green);
+}
+
+.hero-card {
+    width: 290px;
+    height: 290px;
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle, #14291d, #080d0b 70%);
+    box-shadow: 0 0 70px rgba(0,230,154,.08);
+}
+
+.orbit {
+    width: 180px;
+    height: 180px;
+    border: 1px dashed #16865b;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: rotate 20s linear infinite;
+}
+
+.center-icon {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background: var(--green);
+    color: #06110b;
+    display: grid;
+    place-items: center;
+    font-size: 28px;
+    font-weight: 800;
+    box-shadow: 0 0 30px rgba(0,230,154,.4);
+}
+
+.orbit-item {
+    position: absolute;
+    background: #14271d;
+    color: var(--green);
+    border: 1px solid #16734f;
+    padding: 7px 10px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.one { top: -10px; }
+.two { right: -15px; }
+.three { bottom: -10px; }
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.hero-card p {
+    margin-top: 25px;
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: var(--muted);
+}
+
+.section {
+    padding: 90px 10%;
+    max-width: 1400px;
+    margin: auto;
+}
+
+.section-title {
+    font-size: clamp(30px, 4vw, 43px);
+    margin-bottom: 35px;
+    letter-spacing: -1px;
+}
+
+.about-box {
+    max-width: 850px;
+    padding: 30px;
+    background: var(--surface);
+    border-left: 3px solid var(--green);
+    border-radius: 8px;
+    color: var(--muted);
+}
+
+.about-box p + p {
+    margin-top: 15px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background: linear-gradient(145deg, #111c15, #0c130f);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 28px;
+    transition: .3s;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    border-color: var(--green);
+    box-shadow: 0 12px 35px rgba(0,230,154,.07);
+}
+
+.card h3 {
+    color: var(--green);
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.card p {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.date, .project-number {
+    color: var(--green) !important;
+    font-size: 11px !important;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.chips span {
+    padding: 5px 12px;
+    background: #142a1e;
+    border: 1px solid #244b35;
+    color: var(--green);
+    border-radius: 20px;
+    font-size: 11px;
+}
+
+.contact {
+    text-align: center;
+    background: radial-gradient(ellipse at center, #10271a, transparent 70%);
+}
+
+.contact > p:not(.tag) {
+    color: var(--muted);
+    margin-bottom: 25px;
+}
+
+.contact .email {
+    margin-top: 20px;
+}
+
+.contact > a:last-child {
+    color: var(--green);
+    font-size: 13px;
+}
+
+footer {
+    padding: 25px;
+    text-align: center;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 12px;
+}
+
+@media(max-width: 900px) {
+    .hero {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-top: 80px;
+    }
+
+    .hero-card {
+        align-self: center;
+        width: 240px;
+        height: 240px;
+    }
+
+    nav {
+        gap: 12px;
+    }
+
+    nav a {
+        font-size: 11px;
+    }
+}
+
+@media(max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        gap: 18px;
+        padding: 18px 5%;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        padding: 75px 7%;
+    }
+
+    .hero h1 {
+        font-size: 53px;
+        letter-spacing: -2px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section {
+        padding: 65px 7%;
+    }
+}
