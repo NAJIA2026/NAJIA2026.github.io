@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Najia Erramly | Portfolio</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #080d0b;
+    color: #f5f5f5;
+    line-height: 1.7;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 8%;
+    background: #101713;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    color: #00d68f;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #00d68f;
+}
+
+section {
+    padding: 75px 10%;
+}
+
+.hero {
+    min-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+.hero h1 span {
+    color: #00d68f;
+}
+
+.hero h3 {
+    color: #00d68f;
+    font-size: 22px;
+}
+
+.hero p {
+    max-width: 600px;
+    color: #b8c4bd;
+    margin: 20px 0;
+}
+
+.btn {
+    display: inline-block;
+    background: #00d68f;
+    color: #06120c;
+    padding: 12px 25px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    width: fit-content;
+}
+
+h2 {
+    color: #00d68f;
+    font-size: 30px;
+    margin-bottom: 25px;
+}
+
+.card {
+    background: #111a15;
+    border: 1px solid #20382c;
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    color: #00d68f;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #c1cbc4;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.skills span {
+    background: #12271d;
+    border: 1px solid #00a96e;
+    color: #00d68f;
+    padding: 10px 18px;
+    border-radius: 20px;
+}
+
+.contact a {
+    color: #00d68f;
+    text-decoration: none;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    background: #101713;
+    color: #aab5ae;
+}
+
+@media(max-width: 700px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    nav a {
+        margin: 0;
+    }
+
+    .hero h1 {
+        font-size: 35px;
+    }
+
+    section {
+        padding: 55px 7%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">NE.</div>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section class="hero" id="home">
+    <h3>Hello, I'm</h3>
+    <h1>Najia <span>Erramly</span></h1>
+    <h3>Data & Artificial Intelligence Student</h3>
+    <p>
+        I am an IDIA student passionate about Data Science,
+        Artificial Intelligence and technology.
+        I enjoy learning new technologies and building
+        creative projects.
+    </p>
+    <a class="btn" href="#projects">Explore My Work</a>
+</section>
+
+<section id="about">
+    <h2>About Me</h2>
+    <div class="card">
+        <p>
+            I am a second-year student in Data Engineering
+            and Artificial Intelligence (IDIA) at EST Béni Mellal.
+            I am interested in programming, data analysis,
+            machine learning and artificial intelligence.
+            My goal is to develop my technical skills through
+            practical projects and professional experiences.
+        </p>
+    </div>
+</section>
+
+<section id="education">
+    <h2>Education</h2>
+    <div class="card">
+        <h3>EST Béni Mellal</h3>
+        <p>Diploma of University Technology (DUT)</p>
+        <p>Specialization: Data Engineering and Artificial Intelligence (IDIA)</p>
+        <p>2025 – Present</p>
+    </div>
+</section>
+
+<section id="skills">
+    <h2>My Skills</h2>
+    <div class="skills">
+        <span>Python</span>
+        <span>SQL</span>
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JavaScript</span>
+        <span>Machine Learning</span>
+        <span>Data Analysis</span>
+        <span>GitHub</span>
+        <span>Power BI</span>
+    </div>
+</section>
+
+<section id="projects">
+    <h2>My Projects</h2>
+
+    <div class="card">
+        <h3>CompIA</h3>
+        <p>
+            Design and development of a web platform
+            for evaluating and comparing AI development
+            assistants: GitHub Copilot, Cursor AI and ChatGPT.
+        </p>
+        <p><strong>Technologies:</strong> HTML, CSS, JavaScript</p>
+    </div>
+
+    <div class="card">
+        <h3>Data Science Projects</h3>
+        <p>
+            Practical learning projects involving Python,
+            data analysis and machine learning.
+        </p>
+    </div>
+</section>
+
+<section id="experience">
+    <h2>Professional Experience</h2>
+    <div class="card">
+        <h3>OCP Group – Jorf Lasfar</h3>
+        <p>Observation Internship – Information Systems Department (DSI)</p>
+        <p>June 2026 – July 2026</p>
+        <p>
+            Comparative study of AI-assisted development tools:
+            GitHub Copilot, Cursor AI and ChatGPT.
+        </p>
+    </div>
+</section>
+
+<section id="contact" class="contact">
+    <h2>Contact Me</h2>
+    <div class="card">
+        <p>Email:
+            <a href="mailto:najiaerramly19@gmail.com">
+            najiaerramly19@gmail.com</a>
+        </p>
+        <p>GitHub:
+            <a href="https://github.com/NAJIA2026" target="_blank">
+            github.com/NAJIA2026</a>
+        </p>
+        <p>LinkedIn: https://www.linkedin.com/in/najia-erramly-399659318?utm_source=share_via&utm_content=profile&utm_medium=member_android</p>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Najia Erramly | Personal Portfolio</p>
+    <p>Designed with passion for Data & AI.</p>
+</footer>
+
+</body>
+</html>
